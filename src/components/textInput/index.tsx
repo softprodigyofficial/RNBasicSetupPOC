@@ -1,71 +1,61 @@
-import { Text, View,TextInput } from "react-native";
-import React from "react";
-import { styles } from "./styles";
-import { Colors } from "../../utils/colors";
+import React, {useState} from 'react';
+import {View, TextInput, Text, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Entypo';
+import {styles} from './styles';
 
-/**
- * Props for the InputField
- * @param placeholder
- * @param label
- * @param style
- * @param icon
- * @param value
- * @param onChangeText
- * @param onIconPress
- * @param secureTextEntry
- * @param hideState
- * @param error
- */
-
-interface Input {
-  placeholder?: string;
-  label: string;
-  style?: object;
-  icon?: boolean;
+interface Props {
   value: string;
-  onChangeText?: any;
-  onIconPress?: any;
-  secureTextEntry?: boolean;
-  hideState?: boolean;
-  error?: boolean;
-  errorMessage?: string;
-  onEndEditing?: any;
-  keyboardType?: boolean;
-  disabled?: boolean;
-  onFocus?: any;
-  multiline?: boolean;
+  onChangeText: (text: string) => void;
+  error: any;
+  onBlur: () => void;
+  keyboardType: any;
+  placeholder: string;
+  secureTextEntry: any;
+  maxLength: number;
 }
-const InputField = (data: Input) => {
-  const {
-    disabled,
-    placeholder,
-    label,
-    style,
-    icon,
-    value,
-    onChangeText,
-    onIconPress,
-    secureTextEntry,
-    hideState,
-    error,
-    errorMessage,
-    onEndEditing,
-    keyboardType,
-    onFocus,
-    multiline,
-  } = data;
+
+const AppInput: React.FC<Props> = ({
+  value,
+  onChangeText,
+  error,
+  onBlur,
+  keyboardType,
+  placeholder,
+  secureTextEntry,
+  maxLength,
+}) => {
+  const [isPasswordVisible, setPasswordVisible] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!isPasswordVisible);
+  };
+
   return (
     <View>
-       <TextInput
-         placeholder={"Hi"}
-         style={[styles.inputStyle]}
-         returnKeyType="done"
-         keyboardType={keyboardType ? "number-pad" : "default"}
-         onChangeText={onChangeText}
+      <TextInput
+        placeholder={placeholder}
+        value={value}
+        onChangeText={onChangeText}
+        onBlur={onBlur}
+        style={[styles.input, error && styles.errorInput]}
+        keyboardType={keyboardType}
+        secureTextEntry={secureTextEntry && !isPasswordVisible}
+        maxLength={maxLength}
       />
-      {errorMessage && <Text style={styles.messageStyle}>{errorMessage}</Text>}
+      {secureTextEntry && (
+        <TouchableOpacity
+          style={styles.iconContainer}
+          onPress={togglePasswordVisibility}>
+          <Icon
+            name={isPasswordVisible ? 'eye' : 'eye-with-line'}
+            size={20}
+            color="gray"
+          />
+        </TouchableOpacity>
+      )}
+      {error && <Text style={styles.errorText}>{error}</Text>}
     </View>
   );
 };
 
-export default InputField;
+export default AppInput;

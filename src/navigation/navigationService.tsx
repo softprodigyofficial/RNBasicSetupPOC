@@ -1,5 +1,5 @@
 // This file contains all common navigator method()
-import { CommonActions, StackActions } from "@react-navigation/native";
+import { CommonActions } from "@react-navigation/native";
 let _navigator: any;
 // Setting a Top level navigator from App.js
 function setTopLevelNavigator(navigatorRef: any) {

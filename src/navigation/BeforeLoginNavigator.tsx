@@ -1,13 +1,13 @@
-import {StyleSheet, Text, View} from 'react-native';
+import 'react-native-gesture-handler';
 import React from 'react';
 import Login from '../screens/beforeLogin/Login';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import PhoneLogin from '../screens/beforeLogin/PhoneLogin';
 import OtpScreen from '../screens/beforeLogin/OtpScreen';
 import SignUp from '../screens/beforeLogin/SignUp';
 
 const BeforeLoginNavigator = (props: any) => {
-  const BeforeLoginStack = createNativeStackNavigator();
+  const BeforeLoginStack = createStackNavigator();
 
   const screens = [
     {

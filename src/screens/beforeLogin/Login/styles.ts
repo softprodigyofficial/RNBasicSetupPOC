@@ -29,9 +29,14 @@ export default StyleSheet.create({
   },
   clickOpt: {
     alignItems: 'center',
-    marginTop: hp(10),
+    justifyContent: 'flex-end',
   },
   forgetPass: {left: wp(22)},
   forgetTxt: {color: Colors.primary, bottom: hp(1)},
-  submitBtn: {marginVertical: hp(4)},
+  submitBtn: {
+    marginVertical: hp(4),
+    height: 100,
+    justifyContent: 'space-between',
+  },
+  signUpTxt: {color: Colors.primary},
 });

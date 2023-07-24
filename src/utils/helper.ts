@@ -1,4 +1,4 @@
-import { showToast } from "./function";
+import {showToast} from './function';
 
 var regexObject = {
   email:
@@ -10,7 +10,6 @@ var regexObject = {
 
 export function validateEmail(email: string) {
   if (email.length > 100) return false;
-
   return regexObject.email.test(email);
 }
 
@@ -21,7 +20,7 @@ export function validateAlpha(text: string) {
 
 export const validatePassword = (Password: string) => {
   if (Password.length > 100) return false;
-  if (Password && !regexObject.password.test(Password.replace(" ", ""))) {
+  if (Password && !regexObject.password.test(Password.replace(' ', ''))) {
     return false;
   } else {
     return true;
@@ -42,7 +41,7 @@ export const validatePhone = (phone: string) => {
   if (regexObject?.phone.test(phone)) {
     return true;
   } else {
-    showToast("Enter a valid mobile number.");
+    showToast('Enter a valid mobile number.');
     return false;
   }
 };

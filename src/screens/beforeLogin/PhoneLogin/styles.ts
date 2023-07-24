@@ -4,6 +4,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
+import { FontSize } from '../../../utils/dimension';
 
 export default StyleSheet.create({
   container: {
@@ -11,12 +12,19 @@ export default StyleSheet.create({
     backgroundColor: Colors.white,
     padding: hp(2),
   },
+  logContainer: {marginTop: 30, alignItems: 'center'},
   inputStyle: {
+    width: wp(75),
     textAlignVertical: 'center',
-    paddingVertical: wp(3),
-    paddingHorizontal: hp(2),
+    paddingVertical: wp(2),
+    paddingHorizontal: wp(4),
     borderWidth: 1,
-    marginVertical: hp(4),
+    marginVertical: hp(2),
     borderRadius: hp(2),
   },
+  loginText: {
+    textAlign: 'center',
+    fontSize: FontSize.h4,
+    marginVertical: hp(3),
+  }, 
 });

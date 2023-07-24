@@ -1,21 +1,12 @@
-import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import {SafeAreaProvider} from 'react-native-safe-area-context';
+import * as React from 'react';
+import {store} from './src/redux/store';
+import {Provider, useSelector} from 'react-redux';
 import Navigator from './src/navigation/navigator';
 
-const App = () => {
+export default function App() {
   return (
-      <SafeAreaView>
-        <StatusBar backgroundColor={'white'} barStyle={'dark-content'} />
-        <View style={styles.container}>
-          <Navigator />
-        </View>
-      </SafeAreaView>
+    <Provider store={store}>
+      <Navigator />
+    </Provider>
   );
-};
-
-export default App;
-
-const styles = StyleSheet.create({
-  container: {width: '100%', height: '100%'},
-});
+}
