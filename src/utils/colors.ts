@@ -34,4 +34,5 @@ export const Colors = {
   errorRed: '#ED2B2B',
   primary_border: '#90A9FF',
   input_background: 'rgba(192, 206, 255, 0.05)',
+  trans_placeholder: 'rgba(0,0,0, 0.2)',
 };

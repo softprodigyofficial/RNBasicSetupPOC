@@ -3,17 +3,8 @@ import React from 'react';
 
 const Settings = () => {
   return (
-    <View>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Settings Page</Text>
     </View>
   );
 };

@@ -1,12 +1,19 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, {useState, useRef} from 'react';
+import {StyleSheet, View} from 'react-native';
+import Slider from '../../../components/slider';
+import {
+  heightPercentageToDP,
+  widthPercentageToDP,
+} from 'react-native-responsive-screen';
+import styles from './styles'
 
 const Profile = () => {
   return (
-    <View>
-      <Text>Profile</Text>
+    <View
+      style={styles.container}>
+      <Slider />
     </View>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

@@ -1,5 +1,6 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Dispatch} from 'redux';
+import * as storage from '../../service/asyncStoreConfig'
+
 
 // Action Types
 export const actionTypes = {
@@ -33,7 +34,7 @@ export const logout = (): LogoutAction => ({
 // Async Action Creator for Auto-Login
 export const checkToken = () => async (dispatch: Dispatch) => {
   try {
-    const token = await AsyncStorage.getItem('token');
+    const token = await storage.getItem('token');
     if (token) {
       dispatch(loginSuccess(token));
     }
@@ -45,10 +46,10 @@ export const checkToken = () => async (dispatch: Dispatch) => {
 // Async Action Creator for Login
 export const login = (token: any) => async (dispatch: Dispatch) => {
   try {
-    await AsyncStorage.setItem('token', token);
+    await storage.setItem('token', token);
     dispatch({
       type: actionTypes.LOGIN,
-      token: '1234',
+      token: 'token1',
     });
   } catch (error) {
     console.log('Error saving token to AsyncStorage:', error);
@@ -59,7 +60,7 @@ export const login = (token: any) => async (dispatch: Dispatch) => {
 export const logoutAndClearToken = () => async (dispatch: Dispatch) => {
   try {
     // Clear token from AsyncStorage
-    await AsyncStorage.removeItem('token');
+    await storage.removeData('token');
     dispatch({type: actionTypes.LOGOUT});
   } catch (error) {
     console.log('Error clearing token from AsyncStorage:', error);
