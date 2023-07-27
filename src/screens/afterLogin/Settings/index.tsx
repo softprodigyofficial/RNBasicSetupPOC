@@ -1,18 +1,10 @@
 import {Text, View} from 'react-native';
 import React from 'react';
+import styles from './styles';
 
 const Settings = () => {
   return (
-    <View>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
-      <Text>Settings</Text>
+    <View style={styles.container}>
       <Text>Settings</Text>
     </View>
   );
