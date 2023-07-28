@@ -7,7 +7,7 @@ import {
 } from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
-  drawerText: {fontSize: FontSize.h2_1, textAlign: 'center', color: 'grey'},
+  drawerText: {fontSize: FontSize.h2_1, textAlign: 'center', color: Colors.gray},
   sideMenuProfileIcon: {
     resizeMode: 'center',
     alignSelf: 'center',
