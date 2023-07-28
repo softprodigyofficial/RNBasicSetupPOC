@@ -35,4 +35,5 @@ export const Colors = {
   primary_border: '#90A9FF',
   input_background: 'rgba(192, 206, 255, 0.05)',
   trans_placeholder: 'rgba(0,0,0, 0.2)',
+  dodgerBlue: '#007bff',
 };

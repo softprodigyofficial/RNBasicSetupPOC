@@ -4,6 +4,7 @@ import {
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 import { Colors } from '../../utils/colors';
+import { FontSize } from '../../utils/dimension';
 
 
 export default StyleSheet.create({
@@ -17,18 +18,18 @@ export default StyleSheet.create({
   textContainer: {
     position: 'absolute',
     bottom: hp(25),
-    left: 20,
-    right: 20,
+    left: wp(6),
+    right: wp(6),
   },
   title: {
-    fontSize: 24,
+    fontSize: FontSize.h3_5,
     fontWeight: 'bold',
-    color: '#ffffff',
-    marginBottom: 8,
+    color: Colors.white,
+    marginBottom: hp(1),
   },
   description: {
-    fontSize: 16,
-    color: '#ffffff',
+    fontSize: FontSize.h2_1,
+    color: Colors.white,
   },
   pagination: {
     position: 'absolute',
@@ -36,36 +37,18 @@ export default StyleSheet.create({
     alignSelf: 'center',
   },
   pagingText: {
-    fontSize: wp(100) / 30,
-    color: '#888',
-    margin: 3,
+    fontSize: FontSize.h1_5,
+    color: Colors.lightGray,
+    margin: wp(0.7),
   },
   pagingActiveText: {
-    fontSize: wp(100) / 25,
+    fontSize: FontSize.h1_5,
     color: Colors.errorRed,
-    margin: 3,
-  },
-  navigationButtons: {
-    alignSelf: 'center',
-    width: wp(90),
-    flexDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: 'yellow',
-  },
-  navButton: {
-    marginHorizontal: 10,
-    backgroundColor: '#007BFF',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    borderRadius: 5,
-  },
-  navButtonText: {
-    color: '#FFFFFF',
-    fontSize: 18,
+    margin: wp(0.7),
   },
   progressRing: {
     bottom: 0,
-    left: 75,
+    left: wp(20),
     position: 'absolute',
   },
 });
