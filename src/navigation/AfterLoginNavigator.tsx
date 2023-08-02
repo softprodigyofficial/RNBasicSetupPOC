@@ -11,6 +11,7 @@ import Profile from '../screens/afterLogin/Profile';
 import SelectBotNav from '../screens/afterLogin/SelectNav';
 import Icon from 'react-native-vector-icons/Entypo';
 import Slider from '../components/slider';
+import ChangePass from '../screens/afterLogin/Profile/ChangePass';
 
 const MyDrawer = () => {
   const Drawer = createDrawerNavigator();
@@ -35,6 +36,7 @@ export const MyStack = () => {
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Setting" component={Settings} />
       <Stack.Screen name="Onboard" component={Slider} />
+      <Stack.Screen name="ChangePass" component={ChangePass} />
     </Stack.Navigator>
   );
 };
@@ -45,7 +47,7 @@ export const BottomTab1 = () => {
     <Tab.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
       <Tab.Screen
         name="Tab1-Home"
-        component={Home}
+        component={MyStack}
         options={{
           tabBarLabel: 'Updates',
           tabBarIcon: ({color, size}) => (
@@ -58,9 +60,9 @@ export const BottomTab1 = () => {
         name="Tab1-Profile"
         component={Profile}
         options={{
-          tabBarLabel: 'Other Screen',
+          tabBarLabel: 'Profile',
           tabBarIcon: ({color, size}) => (
-            <Icon name="renren" color={color} size={size} />
+            <Icon name="v-card" color={color} size={size} />
           ),
           // tabBarBadge: 3,
         }}

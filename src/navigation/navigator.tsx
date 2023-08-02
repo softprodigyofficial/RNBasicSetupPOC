@@ -5,9 +5,7 @@ import AfterLoginNavigator from './AfterLoginNavigator';
 import BeforeLoginNavigator from './BeforeLoginNavigator';
 import {useDispatch, useSelector} from 'react-redux';
 import navigationService from './navigationService';
-import * as storage from '../service/asyncStoreConfig';
-import {checkToken, setToken} from '../redux/action/loginAction';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {checkToken} from '../redux/action/loginAction';
 
 const Navigator = () => {
   const dispatch = useDispatch<any>();
