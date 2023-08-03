@@ -33,6 +33,8 @@ export const Colors = {
   input_background: 'rgba(192, 206, 255, 0.05)',
   trans_placeholder: 'rgba(0,0,0, 0.2)',
   dodgerBlue: '#007bff',
+  primaryYellow: '#F3B232',
+  gray91: '#e8e8e8',
   greyShade: '#DDDDDD',
   brownYellow: '#BFEFFF',
   blanchedAlmond: '#ffebcd'

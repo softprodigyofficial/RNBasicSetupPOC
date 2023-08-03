@@ -10,6 +10,7 @@ import {
 import CircularRing from '../circularRing';
 import {onboardingScreens} from '../../utils/constant';
 import styles from './styles'
+import { Colors } from '../../utils/colors';
 
 const {width} = Dimensions.get('window');
 
@@ -50,7 +51,7 @@ const Slider = () => {
   return (
     <View style={styles.container}>
       <ScrollView
-        contentContainerStyle={{backgroundColor: 'black'}}
+        contentContainerStyle={{backgroundColor: Colors.black}}
         ref={scrollViewRef}
         pagingEnabled
         horizontal

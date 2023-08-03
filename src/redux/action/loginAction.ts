@@ -1,5 +1,6 @@
-import * as storage from '../../service/asyncStoreConfig';
 import {Dispatch} from 'redux';
+import * as storage from '../../service/asyncStoreConfig'
+
 
 // Action Types
 export const actionTypes = {
