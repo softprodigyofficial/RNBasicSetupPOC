@@ -6,7 +6,6 @@ import styles from './styles';
 import AppButton from '../../../components/appButton';
 import {validatePhone} from '../../../utils/helper';
 import navigationService from '../../../navigation/navigationService';
-import { useNavigation } from '@react-navigation/native';
 
 const PhoneLogin = () => {
   const [phone, onChangePhone] = useState('');

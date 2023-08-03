@@ -43,12 +43,14 @@ const Login = () => {
   const handleSubmit = () => {
     if (name === '' || pass === '') {
       showToast('Please fill all feilds!');
-      setPassError('Pass is required')
-      setNameError('Email is required')
+      setPassError('Pass is required');
+      setNameError('Email is required');
     } else if (nameError !== false || passError !== false) {
       handleNameBlur();
       handlePassBlur();
-      showToast('Resolve Error Message First!');
+      if (nameError !== false && passError !== false) {
+        showToast('Resolve Error Message First!');
+      }
     } else {
       dispatch(login('token1'));
     }

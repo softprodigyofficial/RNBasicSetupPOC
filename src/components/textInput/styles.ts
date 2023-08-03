@@ -1,7 +1,10 @@
-import { StyleSheet } from "react-native";
-import { heightPercentageToDP as hp, widthPercentageToDP as wp } from "react-native-responsive-screen";
-import { Colors} from "../../utils/colors";
-import { FontSize } from "../../utils/dimension";
+import {StyleSheet} from 'react-native';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
+import {Colors} from '../../utils/colors';
+import {FontSize} from '../../utils/dimension';
 
 export const styles = StyleSheet.create({
   input: {
@@ -26,6 +29,6 @@ export const styles = StyleSheet.create({
   iconContainer: {
     position: 'absolute',
     left: wp(65),
-    top: hp(4)
+    top: hp(4),
   },
 });

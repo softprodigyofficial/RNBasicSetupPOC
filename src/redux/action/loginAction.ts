@@ -1,5 +1,6 @@
-import * as storage from '../../service/asyncStoreConfig';
 import {Dispatch} from 'redux';
+import * as storage from '../../service/asyncStoreConfig'
+
 
 // Action Types
 export const actionTypes = {
@@ -48,7 +49,7 @@ export const login = (token: any) => async (dispatch: Dispatch) => {
     await storage.setItem('token', token);
     dispatch({
       type: actionTypes.LOGIN,
-      token: '1234',
+      token: 'token1',
     });
   } catch (error) {
     console.log('Error saving token to storage:', error);
