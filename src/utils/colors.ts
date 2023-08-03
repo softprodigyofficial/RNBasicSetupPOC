@@ -38,4 +38,7 @@ export const Colors = {
   dodgerBlue: '#007bff',
   primaryYellow: '#F3B232',
   gray91: '#e8e8e8',
+  greyShade: '#DDDDDD',
+  brownYellow: '#BFEFFF',
+  blanchedAlmond: '#ffebcd'
 };
