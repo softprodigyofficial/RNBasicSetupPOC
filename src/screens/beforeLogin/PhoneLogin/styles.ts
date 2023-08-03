@@ -12,7 +12,7 @@ export default StyleSheet.create({
     backgroundColor: Colors.white,
     padding: hp(2),
   },
-  logContainer: {marginTop: 30, alignItems: 'center'},
+  logContainer: {marginTop: hp(4), alignItems: 'center'},
   inputStyle: {
     width: wp(75),
     textAlignVertical: 'center',

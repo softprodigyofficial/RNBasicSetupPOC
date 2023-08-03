@@ -5,6 +5,7 @@ import {FontSize} from '../../../utils/dimension';
 import styles from './styles';
 import { Colors } from '../../../utils/colors';
 
+
 const SelectBotNav = () => {
   const navigation = useNavigation<any>();
   return (
@@ -20,6 +21,7 @@ const SelectBotNav = () => {
          style={styles.navOpt}
         onPress={() => navigation.navigate('BottomTab1')}>
         <Text style={styles.navName}>
+
           Bottom Tab 1
         </Text>
       </TouchableOpacity>
