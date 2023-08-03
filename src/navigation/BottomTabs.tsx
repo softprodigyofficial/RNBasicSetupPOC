@@ -1,5 +1,5 @@
 import React from 'react';
-import {Alert, Animated, StyleSheet, TouchableOpacity} from 'react-native';
+import { Animated, TouchableOpacity} from 'react-native';
 import {CurvedBottomBar} from 'react-native-curved-bottom-bar';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Home from '../screens/afterLogin/Home';
@@ -9,6 +9,7 @@ import {Colors} from '../utils/colors';
 import {useNavigation} from '@react-navigation/native';
 import {MyStack} from './AfterLoginNavigator';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import styles from './styles';
 
 export default function BottomTabs() {
   const navigation = useNavigation<any>();
@@ -92,41 +93,3 @@ export default function BottomTabs() {
     </CurvedBottomBar.Navigator>
   );
 }
-
-export const styles = StyleSheet.create({
-  shawdow: {
-    shadowColor: Colors.grey40,
-    shadowOffset: {
-      width: 0,
-      height: 0,
-    },
-    shadowOpacity: 1,
-    shadowRadius: 5,
-  },
-  button: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  btnCircleUp: {
-    width: hp(8),
-    height: hp(8),
-    borderRadius: hp(5),
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: Colors.white,
-    bottom: hp(4),
-    shadowColor: Colors.black,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 1,
-  },
-  tabbarItem: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

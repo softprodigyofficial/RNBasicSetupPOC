@@ -5,7 +5,7 @@ import styles from './styles';
 const Settings = () => {
   return (
     <View style={styles.container}>
-      <Text>Settings Page</Text>
+      <Text>Settings</Text>
     </View>
   );
 };

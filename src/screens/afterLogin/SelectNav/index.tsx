@@ -3,6 +3,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import styles from './styles';
 
+
 const SelectBotNav = () => {
   const navigation = useNavigation<any>();
   return (
@@ -18,6 +19,7 @@ const SelectBotNav = () => {
          style={styles.navOpt}
         onPress={() => navigation.navigate('BottomTab1')}>
         <Text style={styles.navName}>
+
           Bottom Tab 1
         </Text>
       </TouchableOpacity>

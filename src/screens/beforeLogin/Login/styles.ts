@@ -35,7 +35,7 @@ export default StyleSheet.create({
   forgetTxt: {color: Colors.primary, bottom: hp(1)},
   submitBtn: {
     marginVertical: hp(4),
-    height: hp(16),
+    height: hp(15),
     justifyContent: 'space-between',
   },
   signUpTxt: {color: Colors.primary},

@@ -1,6 +1,5 @@
+import * as storage from '../../service/asyncStoreConfig';
 import {Dispatch} from 'redux';
-import * as storage from '../../service/asyncStoreConfig'
-
 
 // Action Types
 export const actionTypes = {
@@ -39,7 +38,7 @@ export const checkToken = () => async (dispatch: Dispatch) => {
       dispatch(loginSuccess(token));
     }
   } catch (error) {
-    console.log('Error retrieving token from AsyncStorage:', error);
+    console.log('Error retrieving token from storage:', error);
   }
 };
 
@@ -52,18 +51,18 @@ export const login = (token: any) => async (dispatch: Dispatch) => {
       token: 'token1',
     });
   } catch (error) {
-    console.log('Error saving token to AsyncStorage:', error);
+    console.log('Error saving token to storage:', error);
   }
 };
 
 // Async Action Creator for Logout
 export const logoutAndClearToken = () => async (dispatch: Dispatch) => {
   try {
-    // Clear token from AsyncStorage
+    // Clear token from storage
     await storage.removeData('token');
     dispatch({type: actionTypes.LOGOUT});
   } catch (error) {
-    console.log('Error clearing token from AsyncStorage:', error);
+    console.log('Error clearing token from storage:', error);
   }
 };
 

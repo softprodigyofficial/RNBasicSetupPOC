@@ -15,18 +15,15 @@ import {
 import {useDispatch} from 'react-redux';
 import styles from './styles';
 import {logout} from '../redux/action/loginAction';
+import { BASE_PATH, proileImage } from '../utils/images';
 
 const CustomSidebarMenu = (props: any) => {
   const dispatch = useDispatch<any>();
-  const BASE_PATH =
-    'https://raw.githubusercontent.com/AboutReact/sampleresource/master/';
-  const proileImage = 'react_logo.png';
-
   const signOut = () => {
     dispatch(logout());
   };
 
-  return (
+  return (  
     <SafeAreaView style={{flex: 1}}>
       {/*Top Large Image */}
       <Image
