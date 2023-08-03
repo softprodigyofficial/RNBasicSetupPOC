@@ -14,6 +14,7 @@ const Navigator = () => {
   useEffect(() => {
     checkToken();
   });
+
   return (
     <NavigationContainer
       ref={navigatorRef => {

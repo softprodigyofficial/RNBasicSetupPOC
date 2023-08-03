@@ -37,4 +37,7 @@ export const Colors = {
   trans_placeholder: 'rgba(0,0,0, 0.2)',
   dodgerBlue: '#007bff',
   primaryYellow: '#F3B232',
+  greyShade: '#DDDDDD',
+  brownYellow: '#BFEFFF',
+  blanchedAlmond: '#ffebcd'
 };
