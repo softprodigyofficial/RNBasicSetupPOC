@@ -2,7 +2,6 @@ import React from 'react';
 import {
   SafeAreaView,
   View,
-  StyleSheet,
   Image,
   Text,
   Linking,
@@ -15,7 +14,7 @@ import {
 } from '@react-navigation/drawer';
 import {useDispatch} from 'react-redux';
 import styles from './styles';
-import {logout, logoutAndClearToken} from '../redux/action/loginAction';
+import {logout} from '../redux/action/loginAction';
 import { BASE_PATH, proileImage } from '../utils/images';
 
 const CustomSidebarMenu = (props: any) => {

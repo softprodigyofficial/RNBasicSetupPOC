@@ -8,6 +8,7 @@ import Profile from '../screens/afterLogin/Profile';
 import {Colors} from '../utils/colors';
 import {useNavigation} from '@react-navigation/native';
 import {MyStack} from './AfterLoginNavigator';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import styles from './styles';
 
 export default function BottomTabs() {

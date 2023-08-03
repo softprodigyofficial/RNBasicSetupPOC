@@ -9,6 +9,7 @@ import ImageOptionsModal from '../../../components/ImageOptionsModal';
 import ProfileTile from '../../../components/profileTile';
 import DatePicker from 'react-native-date-picker';
 import navigationService from '../../../navigation/navigationService';
+import Slider from '../../../components/slider';
 
 const Profile = () => {
   const [visible, setVisible] = useState(false);
@@ -40,6 +41,7 @@ const Profile = () => {
 
   return (
     <View style={styles.container}>
+<!--       <Slider /> -->
       {/* this is for image picker section, and the preview of image with edit functionality */}
       <ImageOptionsModal
         visibility={visible}
