@@ -24,7 +24,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginTop: hp(10),
   },
-  logContainer: {marginTop: 30, alignItems: 'center'},
+  logContainer: {marginTop: hp(4), alignItems: 'center'},
   loginText: {
     textAlign: 'center',
     fontSize: FontSize.h4,

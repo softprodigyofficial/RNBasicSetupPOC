@@ -20,11 +20,8 @@ export const Colors = {
   redOpacityLow: 'rgba(215, 15, 15, 0.05)',
   grey40: '#666666',
   grey: '#373737',
-  brandColor: '#1977F3',
-  activeOutline: '#1977F3',
   outlineColor: '#B9B9B9',
   whiteSmoke: '#F5F5F5',
-  retroBlue: '#1977F3',
   invalid: '#D70F0F',
   lightGrey: '#D3D3D3',
   deactivatedText: '#818181',
@@ -36,4 +33,6 @@ export const Colors = {
   input_background: 'rgba(192, 206, 255, 0.05)',
   trans_placeholder: 'rgba(0,0,0, 0.2)',
   dodgerBlue: '#007bff',
+  almondBrown: '#FFEBCD',
+  lightBlue1: '#BFEFFF'
 };

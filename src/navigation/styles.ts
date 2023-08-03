@@ -1,21 +1,26 @@
 import {StyleSheet} from 'react-native';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
+import {FontSize} from '../utils/dimension';
 
 export default StyleSheet.create({
-  drawerText: {fontSize: 16, textAlign: 'center', color: 'grey'},
+  drawerText: {fontSize: FontSize.h1_8, textAlign: 'center', color: 'grey'},
   sideMenuProfileIcon: {
     resizeMode: 'center',
-    width: 100,
-    height: 100,
-    borderRadius: 100 / 2,
+    width: hp(16),
+    height: hp(16),
+    borderRadius: hp(8),
     alignSelf: 'center',
   },
   iconStyle: {
-    width: 15,
-    height: 15,
-    marginHorizontal: 5,
+    width: hp(2),
+    height: hp(2),
+    marginHorizontal: wp(1),
   },
   customItem: {
-    padding: 16,
+    padding: hp(2),
     flexDirection: 'row',
     alignItems: 'center',
   },

@@ -8,10 +8,10 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <View style={{ height: 50, width: 200, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={styles.optNav}>
         <Button onPress={() => navigation.openDrawer()} title="Open drawer" />
       </View>
-      <View style={{ height: 50, width: 200, alignItems: 'center', justifyContent: 'center'}}>
+      <View style={styles.optNav}>
         <Button
           onPress={() => navigation.navigate('SelectNav')}
           title="Back to Home"

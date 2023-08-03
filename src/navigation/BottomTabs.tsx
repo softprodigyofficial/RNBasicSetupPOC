@@ -8,6 +8,7 @@ import Profile from '../screens/afterLogin/Profile';
 import {Colors} from '../utils/colors';
 import {useNavigation} from '@react-navigation/native';
 import {MyStack} from './AfterLoginNavigator';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export default function BottomTabs() {
   const navigation = useNavigation<any>();
@@ -63,7 +64,6 @@ export default function BottomTabs() {
   return (
     <CurvedBottomBar.Navigator
       type="DOWN"
-      style={styles.bottomBar}
       shadowStyle={styles.shawdow}
       height={55}
       circleWidth={60}
@@ -94,12 +94,8 @@ export default function BottomTabs() {
 }
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-  },
   shawdow: {
-    shadowColor: '#DDDDDD',
+    shadowColor: Colors.grey40,
     shadowOffset: {
       width: 0,
       height: 0,
@@ -111,16 +107,15 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  bottomBar: {},
   btnCircleUp: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: hp(8),
+    height: hp(8),
+    borderRadius: hp(5),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.white,
-    bottom: 28,
-    shadowColor: '#000',
+    bottom: hp(4),
+    shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
       height: 1,
@@ -129,26 +124,9 @@ export const styles = StyleSheet.create({
     shadowRadius: 1.41,
     elevation: 1,
   },
-  imgCircle: {
-    width: 30,
-    height: 30,
-    tintColor: 'gray',
-  },
   tabbarItem: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  img: {
-    width: 30,
-    height: 30,
-  },
-  screen1: {
-    flex: 1,
-    backgroundColor: '#BFEFFF',
-  },
-  screen2: {
-    flex: 1,
-    backgroundColor: '#FFEBCD',
   },
 });

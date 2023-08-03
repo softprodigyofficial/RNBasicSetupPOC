@@ -2,7 +2,6 @@ import React from 'react';
 import {
   SafeAreaView,
   View,
-  StyleSheet,
   Image,
   Text,
   Linking,
@@ -15,8 +14,7 @@ import {
 } from '@react-navigation/drawer';
 import {useDispatch} from 'react-redux';
 import styles from './styles';
-import {logout, logoutAndClearToken} from '../redux/action/loginAction';
-import * as storage from '../service/asyncStoreConfig';
+import {logout} from '../redux/action/loginAction';
 
 const CustomSidebarMenu = (props: any) => {
   const dispatch = useDispatch<any>();

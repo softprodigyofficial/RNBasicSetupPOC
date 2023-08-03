@@ -1,9 +1,7 @@
 import {Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import {FontSize} from '../../../utils/dimension';
 import styles from './styles';
-import { Colors } from '../../../utils/colors';
 
 const SelectBotNav = () => {
   const navigation = useNavigation<any>();

@@ -16,7 +16,7 @@ const styles = StyleSheet.create<Props>({
     alignItems: "center",
     backgroundColor: Colors.primary,
     elevation: 5,
-    borderRadius: 10,
+    borderRadius: hp(2),
     shadowColor: Colors.black,
     shadowOffset: {
       width: 0,
