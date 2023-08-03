@@ -13,7 +13,7 @@ export default StyleSheet.create({
     backgroundColor: Colors.white,
   },
   iconStyle: {
-    backgroundColor: '#F3B232',
+    backgroundColor: Colors.primaryYellow,
     borderColor: 'red',
     position: 'absolute',
     height: hp(3),
@@ -35,7 +35,7 @@ export default StyleSheet.create({
   },
   seperator: {
     borderBottomWidth: 1,
-    borderColor: '#E8E8E8',
+    borderColor: Colors.gray91,
   },
   submitBtn: {backgroundColor: Colors.primaryYellow, width: wp(80)},
   btnTitle: {fontWeight: 'bold', color: Colors.black},

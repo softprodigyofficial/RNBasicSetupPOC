@@ -27,7 +27,7 @@ const ChangePass = () => {
   return (
     <View style={styles.container}>
       <View style={styles.info}>
-        <Icon name="info" size={16} style={styles.icon} />
+        <Icon name="info" size={hp(2)} style={styles.icon} />
         <Text>
           Password must contain a minimum of 8 characters, at least 1 letter, 1
           number, and 1 special character (!,@,#,$,%,^,&,*).
